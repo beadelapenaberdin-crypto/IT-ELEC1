@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        
+        /* Main container for the form */
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 100%;
+            max-width: 400px; /* Limits width on large screens */
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff; /* Blue border on focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        
+        /* Submit button */
+        button {
+            background-color: #007bff; /* Blue background */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer; /* Hand icon on hover */
+            transition: background-color 0.3s; /* Smooth color change */
+        }
+        
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
+        /* Responsive for mobile */
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 20px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="login-container">
+        <h2>Login to Your Account</h2>
+        <form action="/login" method="post"> <!-- action="/login" would point to a server endpoint -->
+            <label for="username">Username or Email:</label>
+            <input type="text" id="username" name="username" required> <!-- required ensures it's not empty -->
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px; color: #666;">
+            Don't have an account? <a href="#">Sign up</a>
+        </p>
+    </main>
+</body>
+</html>
